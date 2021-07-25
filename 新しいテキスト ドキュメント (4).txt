@@ -9,3 +9,5 @@ set MYSQL_PWD=password
 set OPTION=--default-character-set=utf8
 
 "%MYSQLPATH%" %OPTION% -h %HOST% %DB_NAME% -u %USER_ID% < mysql.sql
+
+https://ezolab.blog.fc2.com/blog-entry-101.html

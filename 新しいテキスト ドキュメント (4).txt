@@ -1,0 +1,11 @@
+@echo on
+
+set MYSQLPATH=C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe
+ 
+set HOST=192.168.43.108
+set DB_NAME=information_schema
+set USER_ID=user_name
+set MYSQL_PWD=password
+set OPTION=--default-character-set=utf8
+
+"%MYSQLPATH%" %OPTION% -h %HOST% %DB_NAME% -u %USER_ID% < mysql.sql

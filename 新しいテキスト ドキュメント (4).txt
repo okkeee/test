@@ -1,13 +1,30 @@
+setlocal enabledelayedexpansion
+
 @echo on
 
 set MYSQLPATH=C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe
- 
-set HOST=192.168.43.108
-set DB_NAME=information_schema
-set USER_ID=user_name
-set MYSQL_PWD=password
+set TEST_FOLDER=C:\Users\shimizu\Desktop\csvfile\*.csv
+
+set HOST=localhost
+set DB_NAME=test_db
+set USER_ID=root
+set MYSQL_PWD=root
 set OPTION=--default-character-set=utf8
 
-"%MYSQLPATH%" %OPTION% -h %HOST% %DB_NAME% -u %USER_ID% < mysql.sql
+if exist "%TEST_FOLDER%" (
+    rem もしフォルダ配下のファイルが存在するなら、そのファイル数だけループ
+    for %%f in ("%TEST_FOLDER%") do (
+        rem ：「~nx」を使って、ファイル名のみを出力（拡張子あり）
+        set FILE_NAME= %%~nxf
+        echo FILE_NAME= !FILE_NAME!
+	"%MYSQLPATH%" %OPTION% -h %HOST% %DB_NAME% -u %USER_ID%   -e "set @a=23232; source mysql.sql;"
+    )
+)
 
-https://ezolab.blog.fc2.com/blog-entry-101.html
+
+https://style.potepan.com/articles/25340.html
+
+
+
+
+pause

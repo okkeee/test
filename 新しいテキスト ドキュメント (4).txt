@@ -28,3 +28,6 @@ https://style.potepan.com/articles/25340.html
 
 
 pause
+
+https://vba-create.jp/vba-ie-shell-set-objie/
+

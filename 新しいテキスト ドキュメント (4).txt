@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 @echo on
 
 set MYSQLPATH=C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe
-set TEST_FOLDER=C:\Users\shimizu\Desktop\csvfile\*.csv
+set TEST_FOLDER=C:\Users\ああああああああ\Desktop\csvfile\*.csv
 
 set HOST=localhost
 set DB_NAME=test_db
